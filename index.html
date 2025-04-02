@@ -179,7 +179,7 @@
 		}
 
 		body {
-			margin: var(--page-margin);
+			margin: calc(var(--page-margin) / 2);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -265,6 +265,10 @@
 					"header header"
 					"extras profile"
 					"extras experience";
+			}
+
+			body {
+				margin: var(--page-margin);
 			}
 
 			.header {
