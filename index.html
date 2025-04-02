@@ -18,11 +18,12 @@
 			--link-hover-blue: #007EBB;
 			--icon-size: 22px;
 			--hover-transition: 300ms;
+			--gray-header: #666666;
 		}
 
 		* {
 			font-family: "Arial", sans-serif;
-			font-size: 11pt;
+			font-size: 15px;
 			margin: 0;
 			line-height: 1.5em;
 			box-sizing: border-box;
@@ -36,10 +37,17 @@
 
 		ul {
 			padding-left: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		li>ul {
+			margin-top: 5px;
 		}
 
 		li {
-			line-height: 1.7em;
+			line-height: 1.2em;
 		}
 
 		h3,
@@ -48,8 +56,12 @@
 			font-weight: 400;
 		}
 
+		h5 {
+			color: var(--gray-header);
+		}
+
 		h5>span {
-			border-right: 2px solid black;
+			border-right: 2px solid var(--gray-header);
 			display: inline-block;
 			padding: 0 10px;
 			margin-bottom: 5px;
@@ -119,7 +131,7 @@
 		.info .item {
 			display: flex;
 			align-items: center;
-			font-size: 9pt;
+			font-size: 12px;
 			gap: 5px
 		}
 
@@ -131,16 +143,16 @@
 
 		.header h1 {
 			font-weight: 700;
-			font-size: 30pt;
-			line-height: 30pt;
+			font-size: 40pt;
+			line-height: 1em;
 			text-transform: uppercase;
 			margin: 0;
 		}
 
 		.header h2 {
-			font-size: 18pt;
+			font-size: 24px;
 			font-weight: 700;
-			color: #666666;
+			color: var(--gray-header);
 		}
 
 		.section {
@@ -149,17 +161,17 @@
 
 		.section h3 {
 			text-transform: uppercase;
-			font-size: 14pt;
+			font-size: 18px;
 		}
 
 		.section h4 {
-			font-size: 11pt;
+			font-size: 15pt;
 			font-weight: 700;
 			margin: 0;
 		}
 
 		.section h5 {
-			font-size: 11pt;
+			font-size: 15pt;
 			text-transform: uppercase;
 			margin: 0;
 		}
@@ -191,6 +203,7 @@
 
 		.education * {
 			line-height: 1.2em;
+			font-family: 'Arial Thin', sans-serif;
 		}
 
 		.education>div {
@@ -206,6 +219,7 @@
 		}
 
 		.education h4 {
+			font-size: 14px;
 			text-transform: uppercase;
 		}
 
@@ -221,7 +235,7 @@
 			margin-top: 0;
 		}
 
-		.profile, .experience {
+		.profile {
 			text-align: justify;
 		}
 
@@ -232,6 +246,7 @@
 
 			.icon {
 				print-color-adjust: exact;
+				-webkit-print-color-adjust: exact;
 			}
 
 			body {
@@ -259,7 +274,7 @@
 
 			.layout {
 				display: grid;
-				grid-template-columns: 200px 1fr;
+				grid-template-columns: 195px 1fr;
 				grid-template-rows: auto auto 1fr;
 				grid-template-areas:
 					"header header"
