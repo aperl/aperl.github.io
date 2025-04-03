@@ -61,7 +61,7 @@
 		}
 
 		h5>span {
-			border-right: 2px solid var(--gray-header);
+			border-right: 1px solid var(--gray-header);
 			display: inline-block;
 			padding: 0 10px;
 			margin-bottom: 5px;
@@ -265,6 +265,7 @@
 			}
 
 			body {
+				margin: 0;
 				min-height: calc(100vh - 2 * var(--page-margin));
 			}
 		}
@@ -274,7 +275,7 @@
 
 			.layout {
 				display: grid;
-				grid-template-columns: 195px 1fr;
+				grid-template-columns: 185px 1fr;
 				grid-template-rows: auto auto 1fr;
 				grid-template-areas:
 					"header header"
@@ -282,9 +283,6 @@
 					"extras experience";
 			}
 
-			body {
-				margin: var(--page-margin);
-			}
 
 			.header {
 				grid-area: header;
@@ -312,6 +310,13 @@
 				padding-right: var(--section-padding);
 			}
 		}
+
+		@media screen and (min-width: 700px) {
+			body {
+				margin: var(--page-margin);
+			}
+		}
+
 	</style>
 </head>
 
